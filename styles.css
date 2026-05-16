@@ -147,7 +147,7 @@ background: radial-gradient(
   height: 300%;
 
   background-image: radial-gradient(
-    rgba(255, 255, 255, 0.8) 1px,
+    rgba(255, 255, 255, 0.6) 1px,
     transparent 1px
   );
 
@@ -237,8 +237,27 @@ background: radial-gradient(
   background: #2563eb;
   transform: translateY(-2px);
   border-color: #2563eb;
+}
+
+.profile-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
   position: relative;
   z-index: 5;
+}
+
+.profile-link:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  border-color: #2563eb;
 }
 
 section {
