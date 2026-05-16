@@ -232,7 +232,7 @@ background: radial-gradient(
   transition: all 0.3s ease;
   border: 1px solid #333;
 }
-a
+
 #profile-link:hover {
   background: #2563eb;
   transform: translateY(-2px);
