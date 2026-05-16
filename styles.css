@@ -121,6 +121,7 @@ background: radial-gradient(
     #445 201%,
     #223 300%
   );
+  z-index: 0;
 }
 
 
@@ -134,7 +135,7 @@ background: radial-gradient(
 
   width: 150%;
   height: 150%;
-
+  pointer-events: none;
   overflow: hidden;
 
   z-index: 1;
@@ -161,7 +162,7 @@ background: radial-gradient(
 
   animation: rain 0.7s linear infinite;
 
-  transform: skewX(-15deg);
+  
 }
 
 
