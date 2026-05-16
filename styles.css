@@ -40,16 +40,35 @@ html {
   /*background: brown; */
   color: white;
   text-align: center;
+  position: relative;
+  z-index: 0;
 }
 
 /* PROJECTS */
 #projects {
-  height: 100vh;
+  height: 120vh;
   padding: 80px 20px;
-  background: brown;
   text-align: center;
   color: white;
+  width: 100%;
+  flex-direction: wrap;
+  justify-content: center;
+  align-items: center;
+
+background: radial-gradient(
+    closest-corner circle at 95% 25%,
+    #fff59d 0%,
+    #ffeb3b 25%,
+    #fdd835 30%,
+    #fdd835 40%,
+    #90caf9 300%,
+    #90caf9 800%,
+    transparent 60%
+  );
+
 }
+
+
 
 .project-tile {
   display: grid;
@@ -84,11 +103,86 @@ html {
 /* My PROJECTS */
 
 #my_projects {
-  height: 100vh;
+  height: 90vh;
   padding: 80px 20px;
-  background: #059669;
+
   text-align: center;
-  color: darkred;
+  color: white;
+
+  position: relative;
+  overflow: hidden;
+
+  background: radial-gradient(
+    closest-corner circle at 95% 25%,
+    #ccc 0,
+    #ccc 20%,
+    #445 21%,
+    #445 101%,
+    #445 201%,
+    #223 300%
+  );
+}
+
+
+
+
+.rain {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 150%;
+  height: 150%;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+.rain::before {
+  content: "";
+
+  position: absolute;
+
+  top: -100%;
+  left: 0;
+
+  width: 100%;
+  height: 200%;
+
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,0.2) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+
+  animation: rain 0.7s linear infinite;
+
+  transform: skewX(-15deg);
+}
+
+
+@keyframes rain {
+  from {
+    transform: translateY(-100px) skewX(-15deg);
+  }
+
+  to {
+    transform: translateY(100px) skewX(-15deg);
+  }
+}
+
+
+
+
+
+.project-tile,
+#my_projects h2 {
+  position: relative;
+  z-index: 2;
 }
 
 /* CONTACT */
@@ -154,4 +248,7 @@ html {
   border-color: #2563eb;
 }
 
-
+section {
+  border-bottom: 5px solid rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
