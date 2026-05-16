@@ -237,6 +237,8 @@ background: radial-gradient(
   background: #2563eb;
   transform: translateY(-2px);
   border-color: #2563eb;
+  position: relative;
+  z-index: 5;
 }
 
 section {
